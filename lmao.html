@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <link rel="icon" href="./favicon.png" type="image/png">
+    <title>:3</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: center; /* Cover the entire area */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1; /* Send the video to the background */
+        }
+        .gif {
+            position: absolute;
+            width: 100px; /* Set a width for the GIF */
+            height: auto; /* Maintain aspect ratio */
+            pointer-events: none; /* Prevent interaction with GIFs */
+        }
+    </style>
+</head>
+<body class="lmao">
+    <video id="video" autoplay muted controls loop>
+        <source src="https://b.catgirlsare.sexy/uE_F83Lerr_7.mp4" type="video/mp4">
+    </video>
+
+    <script src="./stop.js"></script>
+    <div class="CANCER">
+    _                                                    _                                                                                                                                                                     
+   FJ___      ___ _    _    _    _    _    _    _       FJ___      ___ _    _    _    _    _        ___ _    _    _     ___ _    _    _    _    _        ___ _    _    _    _    _     ___ _       _    _    _    _    _    _  
+  J  __ `.   F __` L  J |  | L  J |  | L  J |  | L     J  __ `.   F __` L  J |  | L  J |  | L      F __` L  J |  | L   F __` L  J |  | L  J |  | L      F __` L  J |  | L  J |  | L   F __` L     J |  | L  J |  | L  J |  | L 
+  | |--| |  | |--| |  | |  | |  | |  | |  | |  | |     | |--| |  | |--| |  | |  | |  | |  | |     | |--| |  | |  | |  | |--| |  | |  | |  | |  | |     | |--| |  | |  | |  | |  | |  | |--| |     | |  | |  | |  | |  | |  | | 
+  F L  J J  F L__J J  F L__J J  F L__J J  F L__J J     F L  J J  F L__J J  F L__J J  F L__J J     F L__J J  F L__J J  F L__J J  F L__J J  F L__J J     F L__J J  F L__J J  F L__J J  F L__J J     F L__J J  F L__J J  F L__J J 
+ J__L  J__LJ\____,__LJ\____,__LJ\____,__LJ\____,__L   J__L  J__LJ\____,__LJ\____,__LJ\____,__L   J\____,__LJ\____,__LJ\____,__LJ\____,__LJ\____,__L   J\____,__LJ\____,__LJ\____,__LJ\____,__L   J\____,__LJ\____,__LJ\____,__L
+ |__L  J__| J____,__F J____,__F J____,__F J____,__F   |__L  J__| J____,__F J____,__F J____,__F    J____,__F J____,__F J____,__F J____,__F J____,__F    J____,__F J____,__F J____,__F J____,__F    J____,__F J____,__F J____,__F
+                                                                                                                                                                                                                               
+    </div>
+
+    <script>
+        document.body.addEventListener('click', function() {
+            const video = document.getElementById('video');
+            video.muted = false;
+            video.play(); 
+            video.controls = false; 
+            document.body.removeEventListener('click', arguments.callee);
+            setInterval(addRandomGif, 1000);
+        });
+        function addRandomGif() {
+            const gifUrl = "https://b.catgirlsare.sexy/TsimrnBiiUVA.gif";
+            const img = document.createElement("img");
+            img.src = gifUrl;
+            img.className = "gif";
+            img.style.left = Math.random() * window.innerWidth + "px"; 
+            img.style.top = Math.random() * window.innerHeight + "px"; 
+            document.body.appendChild(img);
+        }
+    </script>
+</body>
+</html>
